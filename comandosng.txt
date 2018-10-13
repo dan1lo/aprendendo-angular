@@ -1,3 +1,4 @@
 ng new nomedoprojeto #paracriar um primeiro-projeto
 ng serve # para iniciar o servidor
 ng g c nome #serve para criar um novo component
+ng g m nomedomodulo #serve para cirar um novo modulo
