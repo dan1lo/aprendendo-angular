@@ -1,0 +1,4 @@
+git add nomedoarquivo
+git status #para ver os arquivos que vao ser enviado
+git commit -m "aqui coloco uma mensagem, tipo: comitando primeiro post"
+git push -u origin master # para enviar para o branch master
