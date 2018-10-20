@@ -32,20 +32,52 @@
 <div class = "alert" role="alert" [class.alert-danger] = "classe.value == 'alert-danger'"> erro</div>
 
 
+</article>
 
+<article>
+  <h3> Event binding</h3>
 
+  <div>
+      <button (click)="botaoClicado()" class="btn btn-primary"> me clique</button>
+   </div>
 
-
-
-
-
-
-
-
-
-
-
-
+   <br />
+   <input type="text" (keyup) = "onKeyUp( $event)" (keyup.enter)
+    = "salvarValor(campoInput.value)" (blur) = "salvarValor($event.target.value)"
+    #campoInput/>
+    <p>
+     O valor atual é {{valorAtual}}
+     O valor salvo é {{valorSalvo}}
+   </p>
+ <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]= "isMouseOver"> mouse</span>
 
 </article>
+
+
  </section>
+
+
+<section class="two-away-binding">
+  <article>
+    <h3>
+      two-away
+    </h3>
+    <div>
+      <input type="text" [value] = "nome"  (input) = "nome = $event.target.value"/>
+        <p>primeiro exemplo Você digitou :{{nome}}
+      </p>
+      <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event"/>
+        <p>segundo exemplo Você digitou :{{nome}}
+      </p>
+
+            <input type="text" [(ngModel)]="nome" />
+            <p>
+        terceiro exemplo Você digitou :{{nome}}
+      </p>
+
+
+
+    </div>
+
+  </article>
+</section>
